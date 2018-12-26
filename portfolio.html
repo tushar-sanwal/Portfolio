@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/css/port.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+</head>
+
+<body>
+    <!------------------------------------------HEADER PART------------------------------------------------>
+    <!-----NAV-BAR------->
+    <div class="nav" id="navigation">
+        <ul>
+            <li><a class="link active" href="#home">Home</a></li>
+            <li><a class="link" href="#about">About</a></li>
+            <li><a class="link" href="#project">Projects</a></li>
+            <li><a class="link" href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <script>
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("navigation");
+        var btns = header.getElementsByClassName("link");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+    <!-----HEADER-------->
+    <div class="header">
+        <h1 class="text">Tushar Sanwal</h1>
+        <h2 class="text2">Front End Web Developer</h2>
+    </div>
+    <img class="image" id="home" src="assets/img/icon.svg">
+    <div class="home">
+        <h3 class="welcome">Welcome</h3>
+    </div>
+    <!------------------------------------------------CONTENT-1(ABOUT)----------------------------------------------------------------->
+    <div id="about">
+        <h1 class="about-me">About Me</h1>
+        <p id="about-text">Hey! My name is Tushar Sanwal. I am a student and Self assigned front end web designer from Haldwani, Uttarakhand. I have done BCA because of my interest in computers. I has made small pens in <a id="pen" href="http://codepen.io/tushar-sanwal/">codepen</a> and projects in college.</p>
+        <img class="image-2" src="assets/img/pic2.jpg" />
+    </div>
+    <!------------------------------------------------CONTENT-2(PROJECTS)--------------------------------------------------------------->
+    <div id="project">
+        <h1 class="my-projects">My Projects</h1>
+        <div class="proj pro1">
+            <a href="https://codepen.io/tushar-sanwal/pen/bmwYGG"><img class="pro" src="assets/img/pro1.jpg" width="150px" height="300px"></a>
+            <p class="pro-txt txt-1">Non-responsive Webpage</p>
+        </div>
+        <div class="proj pro2">
+            <a href="https://codepen.io/tushar-sanwal/pen/oaBeNQ"><img class="pro" src="assets/img/pro2.jpg" width="150px" height="300px"></a>
+            <p class="pro-txt">Login-form 1</p>
+        </div>
+        <div class="proj pro3">
+            <a href="https://codepen.io/tushar-sanwal/pen/MqBdJw"><img class="pro" src="assets/img/pro3.jpg" width="150px" height="300px"></a>
+            <p class="pro-txt">Login-form 2</p>
+        </div>
+        <div class="proj pro4">
+            <a href="https://codepen.io/tushar-sanwal/pen/gdgGKP"><img class="pro" src="assets/img/pro4.jpg" width="150px" height="300px"></a>
+            <p class="pro-txt">Calculator</p>
+        </div>
+    </div>
+    <!------------------------------------------------CONTENT-2(CONTACT)--------------------------------------------------------------->
+    <div id="contact">
+        <div class="contact" id="sec4">
+            <form class="contact-form">
+                <h2>Contact Me</h2>
+                <input id="name" type="text" placeholder="Username" required="required" /><br><br>
+                <input id="email" type="email" placeholder="xyz@gmail.com" required="required" /><br><br>
+                <textarea cols="39" rows="5" placeholder="Leave message here......"></textarea><br><br>
+                <button type="submit" onclick="sub()">Submit</button>
+                <script>
+                    function sub() {
+                        var name = document.getElementById("name").value;
+                        var mail = document.getElementById("email").value;
+                        if (name == "" || mail == "") {
+                            alert("Please fill the field");
+                        } else {
+                            alert("submitted successfully");
+                        }
+                    }
+                </script>
+            </form>
+            <div class="contact-with-other">
+                <ul class="list">
+                    <li class="link2"><a id="link2-link" href="https://www.facebook.com/tushar.sanwal"><i class="fab fa-facebook-square"></i></a></li>
+                    <li class="link2"><a id="link2-link" href="https://www.instagram.com/tusharsanwal/"><i class="fab fa-instagram"></i></a></li>
+                    <li class="link2"><a id="link2-link" href="https://twitter.com/SanwalTushar"><i class="fab fa-twitter"></i></a></li>
+                    <li class="link2"><a id="link2-link" href="https://github.com/tushar-sanwal"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
